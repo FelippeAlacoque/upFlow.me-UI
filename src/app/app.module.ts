@@ -15,13 +15,15 @@ import { AppComponent } from './app.component';
 import { UsuarioLoginComponent } from './usuario/usuario-login/usuario-login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UsuarioCadastroComponent } from './usuario/usuario-cadastro/usuario-cadastro.component';
+import { UsuarioComponent } from './usuario/usuario/usuario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuarioCadastroComponent,
     UsuarioLoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
