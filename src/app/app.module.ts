@@ -11,19 +11,16 @@ import { InputMaskModule } from 'primeng/primeng';
 import {PasswordModule} from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
-
-import { UsuarioLoginComponent } from './usuario/usuario-login/usuario-login.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { UsuarioComponent } from './usuario/usuario.component';
 import { UsuarioCadastroComponent } from './usuario/usuario-cadastro/usuario-cadastro.component';
-import { UsuarioComponent } from './usuario/usuario/usuario.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    UsuarioComponent,
     UsuarioCadastroComponent,
-    UsuarioLoginComponent,
-    NavbarComponent,
-    UsuarioComponent
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
