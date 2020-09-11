@@ -6,6 +6,11 @@
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
+    "paths": {
+      "angular2-chartist": [
+        "../node_modules/angular2-chartist/src"
+      ]
+    },
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",

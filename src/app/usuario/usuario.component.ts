@@ -9,7 +9,6 @@ export class UsuarioComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
