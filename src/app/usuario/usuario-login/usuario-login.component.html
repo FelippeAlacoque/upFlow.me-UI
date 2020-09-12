@@ -1,62 +1,25 @@
-<div class="container" >
-  <a class="links" id="paracadastro"></a>
-  <a class="links" id="paralogin"></a>
-  
-  <div class="content">      
-    <!--FORMULÁRIO DE LOGIN-->
-    <div id="login">
-      <form method="post" action=""> 
-        <h1>Login</h1> 
-        <p> 
-          <label for="email_login">Seu e-mail</label>
-          <input id="email_login" name="email_login" required="required" type="text" placeholder="exemplocontato@gmail.com"/>
-        </p>
-        
-        <p> 
-          <label for="senha_login">Sua senha</label>
-          <input id="senha_login" name="senha_login" required="required" minlength="6" type="password" /> 
-        </p>
-        
-        <p> 
-          <input type="submit" value="Logar" /> 
-        </p>
-        
-        <p class="link">
-          Ainda não tem conta?
-          <a href="#paracadastro">Cadastre-se</a>
-        </p>
-      </form>
-    </div>
+<div class="container" responsive="true">
+  <form method="post" utocomplete="off" #usuarioForm="ngForm" (ngSubmit)="logar(usuarioForm)">
+    <div  class="ui-g">
 
-    <!--FORMULÁRIO DE CADASTRO-->
-    <div id="cadastro">
-      <form method="post" action=""> 
-        <h1>Cadastro</h1> 
-        
-        <p> 
-          <label for="nome_cad">Seu nome</label>
-          <input id="nome_cad" name="nome_cad" required="required" type="text" />
-        </p>
-        
-        <p> 
-          <label for="email_cad">Seu e-mail</label>
-          <input id="email_cad" name="email_cad" required="required" type="email"/> 
-        </p>
-        
-        <p> 
-          <label for="senha_cad">Sua senha</label>
-          <input id="senha_cad" name="senha_cad" required="required" type="password"/>
-        </p>
-        
-        <p> 
-          <input type="submit" value="Cadastrar"/> 
-        </p>
-        
-        <p class="link">  
-          Já tem conta?
-          <a href="#paralogin"> Ir para Login </a>
-        </p>
-      </form>
+      <div class="ui-g-12 ui-fluid">
+        <h3>Login</h3>
+      </div>
+
+      <div class="ui-g-4 ui-fluid">
+        <label>Login</label>
+        <input type="text" pInputText id="login" name="login" [(ngModel)]="login.login" required/>
+      </div>
+
+      <div class="ui-g-4 ui-fluid">
+        <label>Senha</label>
+        <input type="password" pPassword id="senha" name="senha" [(ngModel)]="login.senha" required minlength="6"/>
+      </div>
+
+      <div class="ui-g-12">
+        <button pButton type="button" [disabled]="usuarioForm.invalid" label="Login" (click)="logar(usuarioForm)"></button>
+      </div>
+
     </div>
-  </div>
-</div> 
+  </form>
+</div>

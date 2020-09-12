@@ -16,7 +16,7 @@ import { UsuarioCadastroComponent } from './usuario/usuario-cadastro/usuario-cad
 import { NavbarComponent } from './navbar/navbar.component';
 import { UsuarioLoginComponent } from './usuario/usuario-login/usuario-login.component';
 import { UsarioService } from './usuario/usario.service';
-import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [

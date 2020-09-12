@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Usuario } from 'app/models/usuario';
 import { HttpErrorResponse, HttpHeaders, HttpClient } from '@angular/common/http';
 import { _throw as throwError } from 'rxjs/observable/throw';
 import { Observable } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import 'rxjs/add/operator/toPromise';
+
+import { Usuario } from 'app/models/usuario';
+import { Login } from 'app/models/login';
 
 @Injectable()
 export class UsarioService {
@@ -25,6 +27,10 @@ export class UsarioService {
   buscarUsuarioPorID(id: number): Observable<Usuario> {
     return this.httpClient.get<Usuario>(this.url + '/' + id)
           .pipe(retry(2),catchError(this.handleError))
+  }
+
+  logar(login: Login) {
+    return this.httpClient.post('http://localhost:8080/api/usuarios/login',login);
   }
 
   salvarUsuario(usuario: Usuario) {

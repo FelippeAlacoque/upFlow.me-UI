@@ -9,6 +9,4 @@ import { UsarioService } from './usuario/usario.service';
 })
 export class AppComponent {
   title = 'app';
-
-
 }

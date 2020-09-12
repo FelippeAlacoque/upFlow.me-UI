@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 import { Usuario } from 'app/models/usuario';
 import { UsarioService } from '../usario.service';
@@ -17,7 +17,6 @@ export class UsuarioCadastroComponent implements OnInit {
   constructor(private usuarioService: UsarioService) { }
 
   ngOnInit() {
-    this.buscarUsuarios();
   }
 
   salvarUsuario(form: NgForm) {
