@@ -1,25 +1,24 @@
 <div class="container" responsive="true">
-  <form method="post" utocomplete="off" #usuarioForm="ngForm" (ngSubmit)="logar(usuarioForm)">
+  <form method="post" utocomplete="off" #usuarioForm="ngForm" (ngSubmit)="salvarUsuario(usuarioForm)">
     <div  class="ui-g">
 
       <div class="ui-g-12 ui-fluid">
-        <h3>Login</h3>
+        <h3>LOGIN</h3>
       </div>
 
       <div class="ui-g-4 ui-fluid">
         <label>Login</label>
-        <input type="text" pInputText id="login" name="login" [(ngModel)]="login.login" required/>
+        <input type="text" pInputText id="login_log" name="login" [(ngModel)]="usuario.login" required/>
       </div>
 
       <div class="ui-g-4 ui-fluid">
         <label>Senha</label>
-        <input type="password" pPassword id="senha" name="senha" [(ngModel)]="login.senha" required minlength="6"/>
+        <input type="password" pPassword id="senha_log" name="senha" [(ngModel)]="usuario.senha" required minlength="6"/>
       </div>
 
       <div class="ui-g-12">
-        <button pButton type="button" [disabled]="usuarioForm.invalid" label="Login" (click)="logar(usuarioForm)"></button>
+        <button pButton type="button" [disabled]="usuarioForm.invalid" label="Salvar" (click)="salvarUsuario(usuarioForm)"></button>
       </div>
-
     </div>
   </form>
 </div>

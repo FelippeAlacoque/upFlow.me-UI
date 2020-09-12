@@ -17,6 +17,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { UsuarioLoginComponent } from './usuario/usuario-login/usuario-login.component';
 import { UsarioService } from './usuario/usario.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { UsuarioRecuperaSenhaComponent } from './usuario/usuario-recupera-senha/usuario-recupera-senha.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     UsuarioComponent,
     UsuarioCadastroComponent,
     NavbarComponent,
-    UsuarioLoginComponent
+    UsuarioLoginComponent,
+    UsuarioRecuperaSenhaComponent
   ],
   imports: [
     BrowserModule,

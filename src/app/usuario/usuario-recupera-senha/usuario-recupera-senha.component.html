@@ -1,0 +1,19 @@
+<div class="container" responsive="true">
+  <form method="post" utocomplete="off" #usuarioFormRecupera="ngForm" (ngSubmit)="salvarUsuario(usuarioFormRecupera)">
+    <div  class="ui-g">
+
+      <div class="ui-g-12 ui-fluid">
+        <h3>RECUPERAR SENHA</h3>
+      </div>
+
+      <div class="ui-g-4 ui-fluid">
+        <label>Email</label>
+        <input type="email" pInputText id="email_recovery" name="email" [(ngModel)]="usuario.email" required email/>
+      </div>
+
+      <div class="ui-g-12">
+        <button pButton type="button" [disabled]="usuarioFormRecupera.invalid" label="Salvar" (click)="salvarUsuario(usuarioFormRecupera)"></button>
+      </div>
+    </div>
+  </form>
+</div>
