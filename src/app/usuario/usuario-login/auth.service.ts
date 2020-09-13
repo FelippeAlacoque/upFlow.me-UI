@@ -5,28 +5,21 @@ import { Observable } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import 'rxjs/add/operator/toPromise';
 
-import { Usuario } from 'app/models/usuario';
 import { Login } from 'app/models/login';
+import { Router } from '@angular/router';
 
 @Injectable()
-export class UsarioService {
+export class AuthService {
 
-  constructor(private httpClient: HttpClient) { }
+  private usuarioAutenticado: boolean = false;
+  url = 'http://localhost:8080/api/usuarios/login';
+  httpOptions = {headers: new HttpHeaders({ 'Content-Type': 'application/json' })}
 
-  url = 'http://localhost:8080/api/usuarios';
-  
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  }
+  constructor(private router: Router, private httpClient: HttpClient) { }
 
-  salvarUsuario(usuario: Usuario) {
-    return this.httpClient.post(this.url,usuario);
-    //return this.httpClient.post<Usuario>(this.url, JSON.stringify(usuario), this.httpOptions).pipe(retry(2),catchError(this.handleError))
-  }
-
-  atualizarUsuario(usuario: Usuario): Observable<Usuario> {
-    return this.httpClient.put<Usuario>(this.url + '/' + usuario.id, JSON.stringify(usuario), this.httpOptions)
-      .pipe(retry(1),catchError(this.handleError))
+  logar(login: Login) { 
+    return this.httpClient.post(this.url,login);
+    //this.router.navigate(['/cadastro']);
   }
 
   handleError(error: HttpErrorResponse) {
@@ -41,6 +34,5 @@ export class UsarioService {
     console.log(errorMessage);
     return throwError(errorMessage);
   };
-
 
 }

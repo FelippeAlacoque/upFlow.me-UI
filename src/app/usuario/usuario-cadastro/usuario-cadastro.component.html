@@ -17,12 +17,12 @@
         <input type="email" pInputText id="email_cad" name="email" [(ngModel)]="usuario.email" required email/>
       </div>
 
-      <div class="ui-g-4 ui-fluid">
+      <div class="ui-g-5 ui-fluid">
         <label>Login</label>
         <input type="text" pInputText id="login_cad" name="login" [(ngModel)]="usuario.login" required/>
       </div>
 
-      <div class="ui-g-4 ui-fluid">
+      <div class="ui-g-3 ui-fluid">
         <label>Senha</label>
         <input type="password" pPassword id="senha_cad" name="senha" [(ngModel)]="usuario.senha" required minlength="6"/>
       </div>
@@ -30,6 +30,7 @@
       <div class="ui-g-12">
         <button pButton type="button" [disabled]="usuarioForm.invalid" label="Salvar" (click)="salvarUsuario(usuarioForm)"></button>
       </div>
+      
     </div>
   </form>
 </div>

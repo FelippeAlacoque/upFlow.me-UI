@@ -3,7 +3,8 @@ import { NgForm } from '@angular/forms';
 
 import { Usuario } from 'app/models/usuario';
 import { Login } from 'app/models/login';
-import { UsarioService } from '../usario.service';
+import { AuthService } from './auth.service';
+
 
 @Component({
   selector: 'app-usuario-login',
@@ -16,15 +17,18 @@ export class UsuarioLoginComponent implements OnInit {
   usuarios: Usuario[];
   login = {} as Login;
 
-  constructor(private usuarioService: UsarioService) { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }
 
-  logar(form: NgForm) {
-    this.usuarioService.logar(this.login).subscribe(() => {
-      form.reset();
-    })
+  logar(form: NgForm){
+    if(this.usuario.login !== undefined && this.usuario.senha !== undefined){
+      console.log(this.usuario);
+      this.authService.logar(this.usuario).subscribe(() => {
+        form.reset();
+      });
+    }
   }
-  
+
 }

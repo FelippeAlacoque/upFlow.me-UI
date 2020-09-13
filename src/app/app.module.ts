@@ -19,6 +19,7 @@ import { UsarioService } from './usuario/usario.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { UsuarioRecuperaSenhaComponent } from './usuario/usuario-recupera-senha/usuario-recupera-senha.component';
 import { ROUTING } from './app.routing';
+import { AuthService } from './usuario/usuario-login/auth.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { ROUTING } from './app.routing';
   ],
   providers: [
     UsarioService, 
-    HttpClient
+    HttpClient,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,5 +1,14 @@
+<nav class="navbar">
+  <div class="container">
+    <div class="ui-g">
+      <div class="ui-g-12">        
+      </div>
+    </div>
+  </div>
+</nav>
+
 <div class="container" responsive="true">
-  <form method="post" utocomplete="off" #usuarioForm="ngForm" (ngSubmit)="salvarUsuario(usuarioForm)">
+  <form method="post" utocomplete="off" #usuarioFormLogin="ngForm" (ngSubmit)="logar(usuarioFormLogin)">
     <div  class="ui-g">
 
       <div class="ui-g-12 ui-fluid">
@@ -17,8 +26,13 @@
       </div>
 
       <div class="ui-g-12">
-        <button pButton type="button" [disabled]="usuarioForm.invalid" label="Salvar" (click)="salvarUsuario(usuarioForm)"></button>
+        <button pButton type="button" [disabled]="usuarioFormLogin.invalid" label="Login" (click)="logar(usuarioFormLogin)"></button>
       </div>
+
+      <div>
+        <a href="/recupera">Esqueceu sua senha?</a>
+      </div>
+
     </div>
   </form>
 </div>

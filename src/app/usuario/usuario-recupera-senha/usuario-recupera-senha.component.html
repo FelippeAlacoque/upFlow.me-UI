@@ -1,3 +1,12 @@
+<nav class="navbar">
+  <div class="container">
+    <div class="ui-g">
+      <div class="ui-g-12">        
+      </div>
+    </div>
+  </div>
+</nav>
+
 <div class="container" responsive="true">
   <form method="post" utocomplete="off" #usuarioFormRecupera="ngForm" (ngSubmit)="salvarUsuario(usuarioFormRecupera)">
     <div  class="ui-g">
@@ -12,7 +21,11 @@
       </div>
 
       <div class="ui-g-12">
-        <button pButton type="button" [disabled]="usuarioFormRecupera.invalid" label="Salvar" (click)="salvarUsuario(usuarioFormRecupera)"></button>
+        <button pButton type="button" [disabled]="usuarioFormRecupera.invalid" label="Recuperar Senha" (click)="salvarUsuario(usuarioFormRecupera)"></button>
+      </div>
+
+      <div>
+        <a href="/login">Login</a>
       </div>
     </div>
   </form>

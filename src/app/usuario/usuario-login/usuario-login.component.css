@@ -6,3 +6,62 @@
 h3 {
     text-align: center;
 }
+
+button {
+    width: 350px;
+}
+
+a {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.navbar {
+    padding: 10px 0;
+    height:55px;
+    background-color: #24c6dc;
+  }
+  
+  .navbar-toggle {
+    color: #fff;
+  }
+  
+  .navbar-menu {
+    position: fixed;
+    top: 40px;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    z-index: 9998;
+  
+    background-color: #24c6dc;
+  
+    list-style: none;
+  }
+  
+  .navbar-usuario {
+    padding: 8px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #525151;
+  
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .navbar-menuitem {
+    padding: 10px;
+  }
+  
+  .navbar-menuitem a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .navbar-menuitem a:hover {
+    color: #fff;
+  }
+
+
