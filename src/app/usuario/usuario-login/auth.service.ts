@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpErrorResponse, HttpHeaders, HttpClient } from '@angular/common/http';
 import { _throw as throwError } from 'rxjs/observable/throw';
-import { Observable } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
 import 'rxjs/add/operator/toPromise';
 
 import { Login } from 'app/models/login';
@@ -25,7 +23,7 @@ export class AuthService {
   handleError(error: HttpErrorResponse) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
-      // Erro no lado CLIENT SIDE
+      // Erro no CLIENT SIDE
       errorMessage = error.error.message;
     } else {
       // Erro no SERVER SIDE
