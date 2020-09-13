@@ -24,10 +24,10 @@ export class UsuarioLoginComponent implements OnInit {
 
   logar(form: NgForm){
     if(this.usuario.login !== undefined && this.usuario.senha !== undefined){
-      console.log(this.usuario);
+      //console.log(this.usuario);
       this.authService.logar(this.usuario).subscribe(() => {
         form.reset();
-      });
+      })
     }
   }
 

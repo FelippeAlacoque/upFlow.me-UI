@@ -8,7 +8,7 @@
 </nav>
 
 <div class="container" responsive="true">
-  <form method="post" utocomplete="off" #usuarioFormRecupera="ngForm" (ngSubmit)="salvarUsuario(usuarioFormRecupera)">
+  <form method="post" utocomplete="off" #usuarioFormRecupera="ngForm" (ngSubmit)="recuperarSenha(usuarioFormRecupera)">
     <div  class="ui-g">
 
       <div class="ui-g-12 ui-fluid">
@@ -21,7 +21,7 @@
       </div>
 
       <div class="ui-g-12">
-        <button pButton type="button" [disabled]="usuarioFormRecupera.invalid" label="Recuperar Senha" (click)="salvarUsuario(usuarioFormRecupera)"></button>
+        <button pButton type="button" [disabled]="usuarioFormRecupera.invalid" label="Recuperar Senha" (click)="recuperarSenha(usuarioFormRecupera)"></button>
       </div>
 
       <div>

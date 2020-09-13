@@ -2,22 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpErrorResponse, HttpHeaders, HttpClient } from '@angular/common/http';
 import { _throw as throwError } from 'rxjs/observable/throw';
 import 'rxjs/add/operator/toPromise';
-
 import { Login } from 'app/models/login';
-import { Router } from '@angular/router';
 
 @Injectable()
-export class AuthService {
+export class RecuperaSenhaService {
 
-  private usuarioAutenticado: boolean = false;
-  url = 'http://localhost:8080/api/usuarios/login';
+  url = 'http://localhost:8080/api/sendMail';
   httpOptions = {headers: new HttpHeaders({ 'Content-Type': 'application/json' })}
 
-  constructor(private router: Router, private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  logar(login: Login) { 
-    this.router.navigate(['/cadastro']);
-    return this.httpClient.post(this.url,login);    
+  recuperarSenha(login: Login){
+    return this.httpClient.post(this.url,login);
   }
-
 }
