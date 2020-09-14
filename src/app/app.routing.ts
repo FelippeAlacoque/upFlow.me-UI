@@ -1,5 +1,6 @@
 import { ModuleWithProviders } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { ChatComponent } from "./usuario/chat/chat.component";
 
 import { UsuarioCadastroComponent } from "./usuario/usuario-cadastro/usuario-cadastro.component";
 import { UsuarioLoginComponent } from "./usuario/usuario-login/usuario-login.component";
@@ -10,6 +11,7 @@ const APP_ROUTES: Routes =[
     { path: 'recupera', component: UsuarioRecuperaSenhaComponent },
     { path: 'cadastro', component: UsuarioCadastroComponent },
     { path:'login', component: UsuarioLoginComponent },
+    { path:'chat', component: ChatComponent },
     { path: '', component: UsuarioComponent }
 ];
 

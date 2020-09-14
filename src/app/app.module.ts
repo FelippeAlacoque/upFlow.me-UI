@@ -21,6 +21,7 @@ import { UsuarioRecuperaSenhaComponent } from './usuario/usuario-recupera-senha/
 import { ROUTING } from './app.routing';
 import { AuthService } from './usuario/usuario-login/auth.service';
 import { RecuperaSenhaService } from './usuario/usuario-recupera-senha/recupera-senha.service';
+import { ChatComponent } from './usuario/chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { RecuperaSenhaService } from './usuario/usuario-recupera-senha/recupera-
     UsuarioCadastroComponent,
     NavbarComponent,
     UsuarioLoginComponent,
-    UsuarioRecuperaSenhaComponent
+    UsuarioRecuperaSenhaComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
